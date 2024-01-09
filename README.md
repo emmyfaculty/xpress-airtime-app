@@ -10,10 +10,29 @@ Change into the project directory
 cd xpress-airtime-app Configuration Ensure you configure the necessary API keys and datasource configuration in the application.properties file to enable seamless integration.
 ## Usage
 To purchase airtime, use the provided API endpoint by sending a POST request in your postman. http://localhost:8080/api/airtime/purchase
-payload { "requestId": 123344, "uniqueCode": "MTN_24207", "details": { "phoneNumber": "08033333333", "amount": 10000 } }
+payload 
+{ 
+  "requestId": 123344, 
+  "uniqueCode": "MTN_24207",
+  "details": { "phoneNumber": "08033333333", 
+                "amount": 10000 
+                } 
+  }
 Response
-{ "responseCode": "00", "responseMessage": "Successful", "walletInfo": null, "airtimeApiResponse": { "requestId": 123344, "referenceId": "EMMY28498124010812212023743047", "responseCode": null, "responseMessage": null, "data": { "channel": "API", "amount": 10000.0, "phoneNumber": "08033333333" } } }
-## Tools Used:
+{ 
+  "responseCode": "00", 
+  "responseMessage": "Successful", 
+  "walletInfo": null, 
+  "airtimeApiResponse": { "requestId": 123344, 
+                          "referenceId": "EMMY28498124010812212023743047", 
+                          "responseCode": null, 
+                          "responseMessage": null, 
+                          "data": { "channel": "API", 
+                                    "amount": 10000.0, 
+                                    "phoneNumber": "08033333333" } 
+                         } 
+    }
+## Tools Used
 Java Spring boot MySQL database Intellij IDE
 ## Project Summary:
 The Airtime Payment System is a Java-based application designed to facilitate the purchase of airtime products through a secure API. The system allows users to make airtime transactions for specific telecom providers, with a primary focus on reliability, security, and scalability. Key functionalities of the project include:
